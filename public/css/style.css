@@ -1,1 +1,375 @@
 
+/*! minireset.css v0.0.3 | MIT License | github.com/jgthms/minireset.css */html,body,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,iframe,hr,h1,h2,h3,h4,h5,h6{margin:0;padding:0}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}ul{list-style:none}button,input,select,textarea{margin:0}html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}img,embed,iframe,object,audio,video{height:auto;max-width:100%}iframe{border:0}table{border-collapse:collapse;border-spacing:0}td,th{padding:0;text-align:left}
+
+@charset "UTF-8";
+
+/* FONTS */
+
+/* @font-face {
+font-family: "Bazin";
+src: url("https://rawgit.com/Gazaunga/Style/master/Fonts/Bazin.ttf");
+} */
+
+
+@import url(https://fonts.googleapis.com/css?family=Carrois+Gothic+SC);
+
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:200,200i,400,400i,500,500i,700,700i');
+
+
+/** Ultra Light */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 100;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.woff");
+}
+
+/** Thin */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 200;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-thin-webfont.woff");
+}
+
+/** Regular */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 400;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+}
+
+/** Medium */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 500;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-medium-webfont.woff");
+}
+
+/** Semi Bold */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 600;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.woff");
+}
+
+/** Bold */ 
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 700;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff");
+}
+
+
+@font-face {
+  font-family: 'Fira Code';
+  src: url('https://cdn.rawgit.com/tonsky/FiraCode/master/distr/ttf/FiraCode-Regular.ttf') format('opentype');
+}
+
+/* HTML */
+
+*{-webkit-box-sizing:border-box;-ms-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+html{margin:0;padding:0;}
+
+/* COLORS */
+
+.turquoise { background: #1abc9c; }
+.emerland { background: #2ecc71; }
+.peterriver { background: #3498db; }
+.amethyst { background: #9b59b6; }
+.wetasphalt { background: #34495e; }
+.greensea { background: #16a085; }
+.nephritis { background: #27ae60; }
+.belizehole { background: #2980b9; }
+.wisteria { background: #8e44ad; }
+.midnightblue { background: #2c3e50; }
+.sunflower { background: #f1c40f; }
+.carrot { background: #e67e22; }
+.alizarin { background: #e74c3c; }
+.clouds { background: #ecf0f1; color: #999; }
+.concrete { background: #95a5a6; }
+.orange { background: #f39c12; }
+.pumpkin { background: #d35400; }
+.pomegranate { background: #c0392b; }
+.silver { background: #bdc3c7; }
+.asbestos { background: #7f8c8d; }
+
+/* ARTICLE */
+
+
+article { 
+  margin: 1rem;
+  -ms-flex: 1 0 0px;
+  flex: 1; 
+  /* shortcut for "flex-grow: 1". Note that it MUST be a unitless value to work; defined with a unit (e.g. flex: 1px) the shortcut would alter the flex-basis property. */
+}
+article.breaking { 
+  -ms-flex-grow: 2; 
+  flex: 2; 
+  /* shortcut for "flex-grow: 2" */
+} 
+ 
+article img { 
+  width: 100%; height: auto; 
+}
+article h1, article h2, article h3 { font-family: 'Raleway'; }
+article h1 { 
+  font-size: 2rem; 
+  line-height: 1.3;
+}
+article h2, article h3 { 
+  font-size: 1.2rem; 
+  text-align: right; 
+  line-height: 1.3;
+  margin: .3rem 0;
+  }
+article h3 { 
+  font-size: 1.1rem; 
+}
+article p { 
+  font-family: "San Francisco";
+  line-height: 1.6; 
+}
+
+h1 { font-weight: 700; }
+h2 { font-weight: 600; }
+h3 { font-weight: 500; }
+p { font-weight: 400; }
+
+/* MEDIA */
+
+@media screen and (max-width: 750px) {
+  body > h1 { font-size: 3rem; }
+  section { 
+    -ms-flex-direction: column;
+    -webkit-box-orient: vertical;
+    flex-direction: column; 
+  }
+}
+
+/* BODY */
+
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  height: 100%;
+  margin: 0;
+ font-family: 'Carrois Gothic SC';
+ font-size: calc(8px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+}
+
+main {
+  -webkit-box-flex: 2;
+      -ms-flex: 2 1 300px;
+          flex: 2 1 300px;
+  padding: 24px;
+}
+
+aside {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 150px;
+          flex: 1 1 150px;
+  padding: 24px;
+}
+
+
+footer {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+pre code kbd {
+    -webkit-font-feature-settings: "liga" on, "calt" on;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-family: 'Fira Code';
+    background-color: #fff;
+    color:#444;
+    border-bottom: 1px solid #d8dee9;
+}
+
+code {
+  padding: 2px 4px;
+}
+
+pre {
+  padding: 1em;
+  border-left: 2px solid #69c;
+}
+
+/* CONTAINERS */
+
+.conteneurCentral
+{
+  margin:0;padding:0;
+ display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -moz-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-justify-content: space-around;
+  -moz-justify-content: space-around;
+  -ms-justify-content: space-around;
+  justify-content: space-around;
+  -webkit-align-items: stretch;
+  -moz-align-items: stretch;
+  -ms-align-items: stretch;
+  align-items: stretch;
+  width:100%;
+  height:auto;
+}
+
+.box{margin:10px;height:150px;-webkit-border-radius:3px;border-radius:3px;position:relative;}
+.size1{-webkit-flex: 1 100px;-moz-flex: 1 100px;-ms-flex: 1 100px;flex: 1 100px;}
+.size2{-webkit-flex: 2 200px;-moz-flex: 2 200px;-ms-flex: 2 200px;flex: 2 200px;}
+.size3{-webkit-flex: 3 300px;-moz-flex: 3 300px;-ms-flex: 3 300px;flex: 3 300px;}
+.size4{-webkit-flex: 4 400px;-moz-flex: 4 400px;-ms-flex: 4 400px;flex: 4 400px;}
+.color1{background:#2ecc71;}
+.color2{background:#3498db;}
+.color3{background:#f1c40f;}
+.color4{background:#e74c3c;}
+
+/* UNICODE */
+
+p.dialogue:before         { content: "\275D"; }
+p.dialogue:after          { content: "\275E"; }
+
+span.irony:after { content: "\2E46"; }
+span.lovepoint:after { content: "\2E43"; }
+span.certpoint:after { content: "\2E44"; }
+span.authpoint:after { content: "\2E45"; }
+span.accpoint:after { content: "\2E47"; }
+span.doublepoint:after { content: "\2E48"; }
+
+/* tool-tips */
+
+.qtip {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  color: #3bb4e5;
+  border-bottom: 0.05em dotted #3bb4e5;
+  box-sizing: border-box;
+  font-style: normal;
+  -webkit-transition: all .25s ease-in-out;
+  transition:all .25s ease-in-out
+}
+.qtip:hover {color:#069;border-bottom:0.05em dotted #069}
+/*the tip*/
+.qtip:before {
+  content: attr(data-tip);
+  font-size: 14px;
+  position: absolute;
+  background: rgba(10, 20, 30, 0.85);
+  color: #fff;
+  line-height: 1.2em;
+  padding: 0.5em;
+  font-style: normal;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  min-width: 120px;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  font-family: sans-serif;
+  letter-spacing: 0;
+  font-weight: 600
+}
+.qtip:after {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  content: '';
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out
+}
+.qtip:hover:before,
+.qtip:hover:after {
+  visibility: visible;
+  opacity: 1
+}
+/*top*/
+.qtip.tip-top:before {
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, calc(-100% - 8px));
+          transform: translate(-50%, calc(-100% - 8px));
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+.qtip.tip-top:after {
+  border-width: 8px 8px 0 8px;
+  border-color: rgba(10, 20, 30, 0.85) transparent transparent transparent;
+  top: -8px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+/*bottom*/
+.qtip.tip-bottom:before {
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, calc(100% + 8px));
+          transform: translate(-50%, calc(100% + 8px));
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+.qtip.tip-bottom:after {
+  border-width: 0 8px 8px 8px;
+  border-color: transparent transparent rgba(10, 20, 30, 0.85) transparent;
+  bottom: -8px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+/*left*/
+.qtip.tip-left:before {
+  left: 0;
+  top: 50%;
+  -webkit-transform: translate(calc(-100% - 8px), -50%);
+          transform: translate(calc(-100% - 8px), -50%);
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+.qtip.tip-left:after {
+  border-width: 8px 0 8px 8px;
+  border-color: transparent transparent transparent rgba(10, 20, 30, 0.85);
+  left: -8px;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+/*right*/
+.qtip.tip-right:before {
+  right: 0;
+  top: 50%;
+  -webkit-transform: translate(calc(100% + 8px), -50%);
+          transform: translate(calc(100% + 8px), -50%);
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+.qtip.tip-right:after {
+  border-width: 8px 8px 8px 0;
+  border-color: transparent rgba(10, 20, 30, 0.85) transparent transparent;
+  right: -8px;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+/* <i class="qtip tip-top" data-tip="Tip content">
+Any text / image / element
+</i> */
