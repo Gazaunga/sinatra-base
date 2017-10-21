@@ -5,7 +5,7 @@ require 'sass'
 # get is a request for the page (here, the root page)
 require 'sinatra' 
 get '/' do 
-  "Hello World!" 
+  haml :index
 end
 
 # get makes a page available
