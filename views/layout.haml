@@ -1,1 +1,35 @@
-
+!!!
+%html
+  %head
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "ie=edge", "http-equiv" => "x-ua-compatible"}/
+    %meta{:content => "width=device-width, initial-scale=1, shrink-to-fit=no", :name => "viewport"}/
+    %title Page Title
+    %meta{:content => "index,follow", :name => "robots"}/
+    %meta{:content => "index,follow", :name => "googlebot"}/
+    %meta{:content => "nositelinkssearchbox", :name => "google"}/
+    %meta{:content => "Baltimore", :name => "geo.placename"}/
+    %link{:href => "https://fonts.googleapis.com/icon?family=Material+Icons", :rel => "stylesheet"}/
+%body
+  #conteneurCentral
+  %article
+    #header
+      %h1 Welcome!
+      #nav
+        %ol
+          %a(href="/")
+            %li Home
+            %a(href="about")
+              %li About
+              
+ #content
+ =yield
+ 
+ %aside
+   %h1 SideBar
+   %p
+     This is the side bar
+     
+     #footer
+       %p
+         Some footer content
