@@ -14,7 +14,7 @@ get '/about' do
 end
 
 # 404 Error!
+# symbols can't start with numbers SO USE QUOTES!
 not_found do
-  status 404
-  haml :404
+  haml :'404'
 end
