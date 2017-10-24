@@ -15,6 +15,7 @@ end
 
 # 404 Error!
 # symbols can't start with numbers SO USE QUOTES!
+# :layout => bool OR :layout => :custom_layout (any name in views/ folder)
 not_found do
   haml :'404', :layout => false
 end
