@@ -1,0 +1,433 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Serif+Pro);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400);
+* {
+  box-sizing: border-box;
+}
+
+@media only screen and (min-width: 1000px) {
+  article {
+    max-width: 1000px;
+    margin-right: auto;
+    margin-left: auto;
+
+    display: grid;
+    grid-column-gap: 1.5rem;
+    align-items: start;
+    grid-template-columns:
+      [full-start main-start] 3fr [main-end side-start] minmax(auto, 1fr) [side-end full-end];
+  }
+}
+
+html{
+  height:100%;
+}
+
+body {
+  margin: 0;
+  width:100%;
+  height:100%;
+line-height: 150%;
+  font-size: 14px;
+font-family: 'Source Sans Pro', serif;
+  background: #f9f7f1;
+  -webkit-font-feature-settings: "liga", "dlig";
+}
+
+figcaption,
+.side-note {
+  font-size: 0.8em;
+  line-height: 1.875;
+  font-style: italic;
+}
+
+.side-note {
+  border-left: 5px solid #333;
+  padding-left: 1.5rem;
+}
+
+.side-note::before {
+  content: 'Note:';
+  font-style: normal;
+  text-decoration: underline;
+  margin-right: 0.3em;
+}
+
+@media only screen and (max-width: 600px) {
+  .side-note {
+    margin-left: 1.5rem;
+  }
+}
+
+.page-content {
+  margin-top: 3vw;
+  margin-bottom: 3vw;
+}
+
+.post > * {
+  margin-top: 0;
+  margin-bottom: 1.5rem; /* 1 */
+}
+
+@supports (display: grid) {
+  @media only screen and (min-width: 600px) {
+    .post {
+      max-width: 600px;
+      margin-right: auto;
+      margin-left: auto;
+
+      display: grid;
+      grid-column-gap: 1.5rem;
+      align-items: start;
+      grid-template-columns:
+        [full-start main-start] 3fr [main-end side-start] 1fr [side-end full-end];
+    }
+
+    /* Span the regular width */
+    .post > * {
+      grid-column: main;
+    }
+
+    /* Span the full width */
+    .post > pre,
+    .post > figure,
+    .post > blockquote,
+    .grow-to-full {
+      grid-column: full;
+    }
+
+    /*
+    Start with regular content, but span further.
+    Note for future visitors: Use :matches() here
+    */
+    .post > h1,
+    .post > h2,
+    .post > h3,
+    .post > h4,
+    .post > h5,
+    .post > h6 {
+      grid-column: main-start / full-end;
+    }
+    
+    /* Make sure, the side note can take its column */
+    .post > .has-side-note {
+      grid-column-end: main-end;
+    }
+
+    /* Additional, related content (i.e. a side note or boxout) */
+    .post > .side-note {
+      grid-column: side;
+    }
+  }
+
+  @media only screen and (min-width: 1400px) {
+    .post {
+      max-width: 1400px;
+      grid-template-columns:
+        [full-start] 1fr [main-start] 3fr [main-end side-start] 1fr [side-end full-end];
+    }
+  }
+}
+
+/*
+<main class="page-content">
+  <article class="post">
+    <p class="has-side-note">
+    <p class="side-note">
+*/
+
+.underline-container {
+  margin: 0 auto;
+  width: 400px;
+  background-color: #f1f1f1;
+  padding: 1em;
+  box-sizing: border-box;
+}
+
+.underline-text {
+  display: inline;
+  font-size: 2em;
+  font: sans-serif;
+  position: relative;
+  
+  border-bottom: 2px solid red;
+}
+
+/*
+<div class="underline-container">
+  <p class="underline-text">This text is a test for underlined text</p>
+</div>
+*/
+
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+@import url(https://fonts.googleapis.com/css?family=Source+Serif+Pro);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400);
+* {
+  box-sizing: border-box;
+}
+
+@media only screen and (min-width: 1000px) {
+  article {
+    max-width: 1000px;
+    margin-right: auto;
+    margin-left: auto;
+
+    display: grid;
+    grid-column-gap: 1.5rem;
+    align-items: start;
+    grid-template-columns:
+      [full-start main-start] 3fr [main-end side-start] minmax(auto, 1fr) [side-end full-end];
+  }
+}
+
+html{
+  height:100%;
+}
+
+body {
+  margin: 0;
+  width:100%;
+  height:100%;
+line-height: 150%;
+  font-size: 14px;
+font-family: 'Source Sans Pro', serif;
+  background: #f9f7f1;
+  -webkit-font-feature-settings: "liga", "dlig";
+}
+
+figcaption,
+.side-note {
+  font-size: 0.8em;
+  line-height: 1.875;
+  font-style: italic;
+}
+
+.side-note {
+  border-left: 5px solid #333;
+  padding-left: 1.5rem;
+}
+
+.side-note::before {
+  content: 'Note:';
+  font-style: normal;
+  text-decoration: underline;
+  margin-right: 0.3em;
+}
+
+@media only screen and (max-width: 600px) {
+  .side-note {
+    margin-left: 1.5rem;
+  }
+}
+
+.page-content {
+  margin-top: 3vw;
+  margin-bottom: 3vw;
+}
+
+.post > * {
+  margin-top: 0;
+  margin-bottom: 1.5rem; /* 1 */
+}
+
+@supports (display: grid) {
+  @media only screen and (min-width: 600px) {
+    .post {
+      max-width: 600px;
+      margin-right: auto;
+      margin-left: auto;
+
+      display: grid;
+      grid-column-gap: 1.5rem;
+      align-items: start;
+      grid-template-columns:
+        [full-start main-start] 3fr [main-end side-start] 1fr [side-end full-end];
+    }
+
+    /* Span the regular width */
+    .post > * {
+      grid-column: main;
+    }
+
+    /* Span the full width */
+    .post > pre,
+    .post > figure,
+    .post > blockquote,
+    .grow-to-full {
+      grid-column: full;
+    }
+
+    /*
+    Start with regular content, but span further.
+    Note for future visitors: Use :matches() here
+    */
+    .post > h1,
+    .post > h2,
+    .post > h3,
+    .post > h4,
+    .post > h5,
+    .post > h6 {
+      grid-column: main-start / full-end;
+    }
+    
+    /* Make sure, the side note can take its column */
+    .post > .has-side-note {
+      grid-column-end: main-end;
+    }
+
+    /* Additional, related content (i.e. a side note or boxout) */
+    .post > .side-note {
+      grid-column: side;
+    }
+  }
+
+  @media only screen and (min-width: 1400px) {
+    .post {
+      max-width: 1400px;
+      grid-template-columns:
+        [full-start] 1fr [main-start] 3fr [main-end side-start] 1fr [side-end full-end];
+    }
+  }
+}
+
+/*
+<main class="page-content">
+  <article class="post">
+    <p class="has-side-note">
+    <p class="side-note">
+*/
+
+.underline-container {
+  margin: 0 auto;
+  width: 400px;
+  background-color: #f1f1f1;
+  padding: 1em;
+  box-sizing: border-box;
+}
+
+.underline-text {
+  display: inline;
+  font-size: 2em;
+  font: sans-serif;
+  position: relative;
+  
+  border-bottom: 2px solid red;
+}
+
+/*
+<div class="underline-container">
+  <p class="underline-text">This text is a test for underlined text</p>
+</div>
+*/
