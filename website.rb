@@ -13,6 +13,8 @@ get '/about' do
   haml :about
 end
 
-get '/404' do
+# 404 Error!
+not_found do
+  status 404
   haml :404
 end
