@@ -1,1 +1,1 @@
-figure out how to ensure the navigation and footer content don't show up on the 404 page
+get main and article in index.haml to be in layout.haml
