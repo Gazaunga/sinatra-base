@@ -19,3 +19,8 @@ end
 not_found do
   haml :'404', :layout => false
 end
+
+# This might not work
+if server_error? == true do
+  haml :'503', :layout => false
+end
