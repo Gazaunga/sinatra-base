@@ -21,6 +21,10 @@ not_found do
 end
 
 # This might not work
-if server_error? == true do
-  haml :'503', :layout => false
+#if server_error? == true do
+#  haml :'503', :layout => false
+#end
+
+get '/503' do
+    status 503
 end
