@@ -1,0 +1,179 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0 0 4vw;
+}
+body:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+* {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+div {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  margin: 4vw 0 0 4vw;
+  width: 44vw;
+  height: 25vw;
+  float: left;
+  border: 1px solid;
+}
+
+.img-1 {
+  background: black url("//unsplash.it/960/540/?random=1") no-repeat center/0;
+}
+
+.img-2 {
+  background: black url("//unsplash.it/960/540/?random=2") no-repeat center/0;
+}
+
+.img-3 {
+  background: black url("//unsplash.it/960/540/?random=3") no-repeat center/0;
+}
+
+.img-4 {
+  background: black url("//unsplash.it/960/540/?random=4") no-repeat center/0;
+}
+
+.img-5 {
+  background: black url("//unsplash.it/960/540/?random=5") no-repeat center/0;
+}
+
+.img-6 {
+  background: black url("//unsplash.it/960/540/?random=6") no-repeat center/0;
+}
+
+.animate:after {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: inherit;
+  background-size: cover;
+}
+
+.zoom-in.js-press:after,
+.zoom-in:hover:after {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.zoom-out:after {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.zoom-out.js-press:after,
+.zoom-out:hover:after {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.fade-in:after {
+  opacity: 0.6;
+}
+
+.fade-in.js-press:after,
+.fade-in:hover:after {
+  opacity: 1;
+}
+
+.fade-out.js-press:after,
+.fade-out:hover:after {
+  opacity: 0.6;
+}
+
+.fade-in-zoom-in:after {
+  opacity: 0.3;
+  -webkit-transform: scale(2);
+          transform: scale(2);
+}
+
+.fade-in-zoom-in.js-press:after,
+.fade-in-zoom-in:hover:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.fade-out-zoom-out:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.fade-out-zoom-out.js-press:after,
+.fade-out-zoom-out:hover:after {
+  opacity: 0.3;
+  -webkit-transform: scale(2);
+          transform: scale(2);
+}
+
+@media (max-width: 540px) {
+  div {
+    width: 92vw;
+    height: 40vw;
+  }
+}
+@media (pointer: coarse) {
+  .zoom-in:not(.js-press):hover:after {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+
+  .zoom-out:not(.js-press):hover:after {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+
+  .fade-in:not(.js-press):hover:after {
+    opacity: 0.6;
+  }
+
+  .fade-out:not(.js-press):hover:after {
+    opacity: 1;
+  }
+
+  .fade-in-zoom-in:not(.js-press):hover:after {
+    opacity: 0.3;
+    -webkit-transform: scale(2);
+            transform: scale(2);
+  }
+
+  .fade-out-zoom-out:not(.js-press):hover:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+/*
+EXAMPLE
+<div class="img-1 animate zoom-in"></div>
+<div class="img-2 animate zoom-out"></div>
+<div class="img-3 animate fade-in"></div>
+<div class="img-4 animate fade-out"></div>
+<div class="img-5 animate fade-in-zoom-in"></div>
+<div class="img-6 animate fade-out-zoom-out"></div>
+
+*/
