@@ -1,2 +1,2 @@
-require 'website.rb'
+require './website.rb'
 run website.rb
