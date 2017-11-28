@@ -1,0 +1,12 @@
+a {
+  text-decoration: none;
+  color: #000;
+  border-bottom: 3px solid #b4e7f8;
+  box-shadow: inset 0 -4px 0 #b4e7f8;
+  cursor: pointer;
+  -webkit-transition: background-color 0.15s cubic-bezier(0.33, 0.66, 0.66, 1);
+  transition: background-color 0.15s cubic-bezier(0.33, 0.66, 0.66, 1);
+}
+a:hover, a:focus {
+  background-color: #b4e7f8;
+}
