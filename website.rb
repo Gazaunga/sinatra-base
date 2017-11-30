@@ -25,6 +25,11 @@ error do
 haml :'503', :layout => false
 end
 
+#get '/raise503' do
+#    status 503
+#    haml :'503', :layout => false
+#end
+
 #get '/503' do
 #    status 503
 #end
