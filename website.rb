@@ -30,6 +30,6 @@ end
 #    haml :'503', :layout => false
 #end
 
-#get '/503' do
-#    status 503
-#end
+error '/503' do
+  slim :'503', :layout => false
+end
